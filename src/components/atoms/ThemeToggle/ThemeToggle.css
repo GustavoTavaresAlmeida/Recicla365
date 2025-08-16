@@ -1,0 +1,107 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-xl);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-tertiary);
+  border-color: var(--primary-300);
+  color: var(--text-primary);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+.theme-toggle:active {
+  transform: scale(0.98);
+}
+
+.theme-toggle__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover .theme-toggle__icon {
+  transform: rotate(180deg);
+}
+
+.theme-toggle__text {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.theme-toggle--compact {
+  padding: var(--spacing-2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.theme-toggle--compact .theme-toggle__text {
+  display: none;
+}
+
+.theme-toggle--compact .theme-toggle__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.theme-toggle--transitioning {
+  pointer-events: none;
+}
+
+.theme-toggle--transitioning .theme-toggle__icon {
+  animation: themeTransition 0.3s ease-in-out;
+}
+
+@keyframes themeTransition {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(0.8) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    var(--primary-500),
+    var(--primary-600)
+  );
+  opacity: 0;
+  transition: var(--transition);
+  border-radius: inherit;
+}
+
+.theme-toggle:hover::before {
+  opacity: 0.1;
+}

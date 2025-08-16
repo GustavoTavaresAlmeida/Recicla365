@@ -1,0 +1,126 @@
+.state-card {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.state-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-300);
+}
+
+.state-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2);
+  width: 100%;
+}
+
+.state-card__state {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--primary-600);
+  letter-spacing: 1px;
+}
+
+.state-card__count {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.state-card__label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.state-card[data-count="0"] .state-card__count {
+  color: var(--text-tertiary);
+}
+
+.state-card[data-count="1"] .state-card__count,
+.state-card[data-count="2"] .state-card__count,
+.state-card[data-count="3"] .state-card__count {
+  color: var(--warning-500);
+}
+
+.state-card[data-count="4"] .state-card__count,
+.state-card[data-count="5"] .state-card__count,
+.state-card[data-count="6"] .state-card__count,
+.state-card[data-count="7"] .state-card__count,
+.state-card[data-count="8"] .state-card__count,
+.state-card[data-count="9"] .state-card__count {
+  color: var(--primary-600);
+}
+
+.state-card[data-count^="1"] .state-card__count,
+.state-card[data-count^="2"] .state-card__count {
+  color: var(--success-500);
+}
+
+.state-card--highlighted {
+  border: 2px solid var(--primary-500);
+  background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+}
+
+[data-theme="dark"] .state-card--highlighted {
+  background: linear-gradient(135deg, var(--primary-900), var(--primary-800));
+}
+
+.state-card--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.state-card {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .state-card {
+    min-height: 100px;
+  }
+  
+  .state-card__state {
+    font-size: var(--font-size-xl);
+  }
+  
+  .state-card__count {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .state-card {
+    min-height: 80px;
+  }
+  
+  .state-card__state {
+    font-size: var(--font-size-lg);
+  }
+  
+  .state-card__count {
+    font-size: var(--font-size-xl);
+  }
+}

@@ -1,0 +1,87 @@
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  width: 100%;
+  max-width: 500px;
+}
+
+.register-form__error {
+  padding: var(--spacing-3);
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger-500);
+  border-radius: var(--border-radius);
+  color: var(--danger-500);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.register-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+}
+
+.register-form__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.register-form__submit {
+  margin-top: var(--spacing-2);
+}
+
+.register-form select.input {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-3) center;
+  background-size: 16px;
+  padding-right: calc(var(--spacing-3) + 24px);
+  cursor: pointer;
+}
+
+.register-form select.input:focus {
+  outline: none;
+}
+
+.register-form--loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .register-form {
+    max-width: 100%;
+  }
+  
+  .register-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-form {
+    gap: var(--spacing-3);
+  }
+  
+  .register-form__row {
+    gap: var(--spacing-3);
+  }
+}
+
+.register-form {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

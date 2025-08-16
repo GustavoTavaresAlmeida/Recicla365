@@ -1,0 +1,38 @@
+.label {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-1);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.label:hover {
+  color: var(--primary-600);
+}
+
+.label-required {
+  color: var(--danger-500);
+  margin-left: var(--spacing-1);
+  font-weight: 600;
+}
+
+.label--large {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+.label--small {
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+}
+
+.label--disabled {
+  color: var(--text-tertiary);
+  cursor: not-allowed;
+}
+
+.label--disabled:hover {
+  color: var(--text-tertiary);
+}
