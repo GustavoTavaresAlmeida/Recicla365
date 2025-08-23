@@ -1,0 +1,137 @@
+.text {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-primary);
+  transition: color var(--transition-fast);
+}
+
+.text--h1 {
+  font-size: var(--font-size-5xl);
+  line-height: var(--line-height-tight);
+}
+
+.text--h2 {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-tight);
+}
+
+.text--h3 {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-tight);
+}
+
+.text--h4 {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-snug);
+}
+
+.text--h5 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-snug);
+}
+
+.text--h6 {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-snug);
+}
+
+.text--subtitle1 {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-medium);
+}
+
+.text--subtitle2 {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-medium);
+}
+
+.text--body1 {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+.text--body2 {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+}
+
+.text--caption {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+}
+
+.text--primary {
+  color: var(--text-primary);
+}
+
+.text--secondary {
+  color: var(--text-secondary);
+}
+
+.text--tertiary {
+  color: var(--text-tertiary);
+}
+
+.text--disabled {
+  color: var(--text-disabled);
+}
+
+.text--inherit {
+  color: inherit;
+}
+
+.text--error {
+  color: var(--error);
+}
+
+.text--success {
+  color: var(--success);
+}
+
+.text--warning {
+  color: var(--warning);
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--justify {
+  text-align: justify;
+}
+
+.text--light {
+  font-weight: var(--font-weight-light);
+}
+
+.text--normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.text--medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.text--semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.text--bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.text--truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
