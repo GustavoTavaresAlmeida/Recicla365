@@ -1,4 +1,68 @@
-import type { User, CollectionPoint, DashboardData } from '../types';
+// src/data/mockData.ts
+
+export interface User {
+  id: string;
+  nome: string;
+  email: string;
+  cpf: string;
+  sexo: 'M' | 'F' | 'Outro';
+  nascimento: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface LoginCredentials {
+  email: string;
+  senha: string;
+}
+
+export interface RegisterData {
+  nome: string;
+  email: string;
+  cpf: string;
+  sexo: 'M' | 'F' | 'Outro';
+  nascimento: string;
+  senha: string;
+  confirmarSenha: string;
+}
+
+export interface Address {
+  cep: string;
+  logradouro: string;
+  bairro: string;
+  cidade: string;
+  estado: string;
+  numero: string;
+  latitude?: number;
+  longitude?: number;
+}
+
+export interface CollectionPoint {
+  id: string;
+  nome: string;
+  descricao: string;
+  endereco: Address;
+  tiposResiduos: string[];
+  coordenadas: {
+    latitude: number;
+    longitude: number;
+  };
+  usuarioId: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface DashboardStats {
+  totalPontosColeta: number;
+  pontosPorEstado: Record<string, number>;
+  pontosPorTipoResiduo: Record<string, number>;
+}
+
+export interface DashboardData {
+  stats: DashboardStats;
+  recentPoints: CollectionPoint[];
+  userPoints: CollectionPoint[];
+}
 
 export const mockUsers: User[] = [
   {
@@ -190,4 +254,74 @@ export const fetchCEP = async (cep: string) => {
   }
   
   throw new Error('CEP não encontrado');
+};
+
+// =====================================
+// FUNÇÕES MOCK PARA AUTENTICAÇÃO
+// =====================================
+
+export const mockLogin = async (credentials: LoginCredentials) => {
+  await delay(1000); // Simula delay da API
+
+  // Usuário mock para testes
+  const mockUser: User = {
+    id: 'u175493982627',
+    nome: 'João da Silva',
+    email: credentials.email,
+    cpf: '123.456.789-00',
+    sexo: 'M',
+    nascimento: '1990-05-15',
+    createdAt: '2024-01-15T10:30:00Z',
+    updatedAt: '2024-01-15T10:30:00Z',
+  };
+
+  // Validação simples para testes
+  if (credentials.email === 'joao@email.com' && credentials.senha === 'senha123') {
+    return {
+      user: mockUser,
+      token: 'mock-jwt-token-' + Date.now(),
+      message: 'Login realizado com sucesso'
+    };
+  }
+
+  // Simula diferentes tipos de erro
+  if (!credentials.email || !credentials.senha) {
+    throw new Error('E-mail e senha são obrigatórios');
+  }
+
+  throw new Error('Credenciais inválidas');
+};
+
+export const mockRegister = async (data: RegisterData) => {
+  await delay(1200); // Simula delay da API
+
+  // Validações básicas
+  if (!data.nome || !data.email || !data.cpf || !data.senha) {
+    throw new Error('Todos os campos são obrigatórios');
+  }
+
+  if (data.email === 'usuario@existente.com') {
+    throw new Error('E-mail já cadastrado');
+  }
+
+  if (data.cpf === '111.111.111-11') {
+    throw new Error('CPF já cadastrado');
+  }
+
+  const mockUser: User = {
+    id: 'u' + Date.now(),
+    nome: data.nome,
+    email: data.email,
+    cpf: data.cpf,
+    sexo: data.sexo,
+    nascimento: data.nascimento,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  };
+
+  return {
+    user: mockUser,
+    token: 'mock-jwt-token-' + Date.now(),
+    message: 'Usuário cadastrado com sucesso'
+  };
 };
