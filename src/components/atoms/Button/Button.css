@@ -1,16 +1,10 @@
-/* ==========================
-   BUTTON COMPONENT STYLES
-   ========================== */
-
 .btn {
-  /* Base styles */
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-sm);
   
-  /* Typography */
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-medium);
   text-align: center;
@@ -18,26 +12,19 @@
   white-space: nowrap;
   line-height: 1;
   
-  /* Layout */
   border: var(--border-width-thin) solid transparent;
   border-radius: var(--border-radius-lg);
   cursor: pointer;
   user-select: none;
   
-  /* Transitions */
   transition: all var(--transition-fast);
   
-  /* States */
   background: none;
   outline: none;
   
-  /* Prevent focus outline, we'll add custom focus styles */
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ==========================
-   SIZE VARIANTS
-   ========================== */
 
 .btn--sm {
   padding: var(--spacing-xs) var(--spacing-md);
@@ -57,11 +44,6 @@
   min-height: 48px;
 }
 
-/* ==========================
-   COLOR VARIANTS
-   ========================== */
-
-/* Primary Button (Azul) */
 .btn--primary {
   background-color: var(--btn-primary-bg);
   border-color: var(--btn-primary-border);
@@ -81,7 +63,6 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* Secondary Button (Verde) */
 .btn--secondary {
   background-color: var(--btn-secondary-bg);
   border-color: var(--btn-secondary-border);
@@ -101,7 +82,6 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* Outline Button */
 .btn--outline {
   background-color: var(--btn-outline-bg);
   border-color: var(--btn-outline-border);
@@ -119,7 +99,6 @@
   transform: scale(0.98);
 }
 
-/* Ghost Button */
 .btn--ghost {
   background-color: var(--btn-ghost-bg);
   border-color: transparent;
@@ -136,7 +115,6 @@
   transform: scale(0.98);
 }
 
-/* Danger Button */
 .btn--danger {
   background-color: var(--error);
   border-color: var(--error);
@@ -157,17 +135,12 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* ==========================
-   STATE MODIFIERS
-   ========================== */
 
-/* Full Width */
 .btn--full-width {
   width: 100%;
   display: flex;
 }
 
-/* Disabled State */
 .btn--disabled,
 .btn:disabled {
   opacity: 0.6;
@@ -177,7 +150,6 @@
   box-shadow: none !important;
 }
 
-/* Loading State */
 .btn--loading {
   cursor: wait;
   pointer-events: none;
@@ -187,15 +159,11 @@
   opacity: 0.7;
 }
 
-/* Focus State */
 .btn:focus-visible {
   outline: 2px solid var(--border-focus);
   outline-offset: 2px;
 }
 
-/* ==========================
-   BUTTON CONTENT ELEMENTS
-   ========================== */
 
 .btn__content {
   display: flex;
@@ -218,10 +186,6 @@
   height: 1em;
   fill: currentColor;
 }
-
-/* ==========================
-   LOADING SPINNER
-   ========================== */
 
 .btn__loading-spinner {
   display: flex;
@@ -262,9 +226,6 @@
   }
 }
 
-/* ==========================
-   RESPONSIVE ADJUSTMENTS
-   ========================== */
 
 @media (max-width: 768px) {
   .btn--sm {
@@ -286,9 +247,6 @@
   }
 }
 
-/* ==========================
-   ACCESSIBILITY IMPROVEMENTS
-   ========================== */
 
 @media (prefers-reduced-motion: reduce) {
   .btn {
@@ -305,7 +263,6 @@
   }
 }
 
-/* High contrast mode support */
 @media (prefers-contrast: high) {
   .btn {
     border-width: var(--border-width-medium);
