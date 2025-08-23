@@ -18,3 +18,4 @@ export { Footer } from './organisms/Footer';
 
 export { AuthLayout } from './templates/AuthLayout';
 export { DashboardLayout } from './templates/DashboardLayout';
+export { PublicLayout } from './templates/PublicLayout';
