@@ -8,3 +8,5 @@ export { FormField } from './molecules/FormField';
 export { Card } from './molecules/Card';
 export { SearchBox } from './molecules/SearchBox/Index';
 export { NavigationItem } from './molecules/NavigationItem/index';
+
+export { Header } from './organisms/Header';
