@@ -10,3 +10,5 @@ export { SearchBox } from './molecules/SearchBox/Index';
 export { NavigationItem } from './molecules/NavigationItem/index';
 
 export { Header } from './organisms/Header';
+export { LoginForm } from './organisms/LoginForm';
+export { RegisterForm } from './organisms/RegisterForm';
