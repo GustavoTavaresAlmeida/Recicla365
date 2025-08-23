@@ -1,0 +1,120 @@
+.public-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.public-layout__hero {
+  background: var(--bg-gradient-hero);
+  padding: var(--spacing-5xl) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.public-layout__hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+.public-layout__hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.public-layout__hero-title {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: 0;
+  background: var(--bg-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: var(--line-height-tight);
+}
+
+.public-layout__hero-subtitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.public-layout__main {
+  flex: 1;
+  position: relative;
+}
+
+.public-layout__hero-content {
+  animation: slideInUp 0.8s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .public-layout__hero {
+    padding: var(--spacing-4xl) 0;
+  }
+  
+  .public-layout__hero-title {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .public-layout__hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .public-layout__hero {
+    padding: var(--spacing-3xl) 0;
+  }
+  
+  .public-layout__hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .public-layout__hero-subtitle {
+    font-size: var(--font-size-base);
+  }
+}
+
+.public-layout--full-width .container {
+  max-width: none;
+  padding: 0;
+}
+
+.public-layout--centered .public-layout__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4xl) 0;
+}

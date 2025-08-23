@@ -1,0 +1,30 @@
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.search-box__clear-icon {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.search-box__clear-icon:hover {
+  opacity: 1;
+}
+
+.search-box__button {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+  }
+  
+  .search-box__button {
+    width: 100%;
+  }
+}
