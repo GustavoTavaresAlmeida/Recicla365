@@ -1,0 +1,10 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  width: 100%;
+}
+
+.form-field__helper {
+  margin-top: var(--spacing-xs);
+}
