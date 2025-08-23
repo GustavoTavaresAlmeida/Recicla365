@@ -1,0 +1,62 @@
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+
+.icon--xs {
+  width: 12px;
+  height: 12px;
+}
+
+.icon--sm {
+  width: 16px;
+  height: 16px;
+}
+
+.icon--md {
+  width: 20px;
+  height: 20px;
+}
+
+.icon--lg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon--xl {
+  width: 32px;
+  height: 32px;
+}
+
+.icon--primary {
+  color: var(--color-primary-600);
+}
+
+.icon--secondary {
+  color: var(--color-secondary-600);
+}
+
+.icon--success {
+  color: var(--success);
+}
+
+.icon--warning {
+  color: var(--warning);
+}
+
+.icon--error {
+  color: var(--error);
+}
+
+.icon--inherit {
+  color: inherit;
+}
+
+.icon--clickable {
+  cursor: pointer;
+}
+
+.icon--clickable:hover {
+  transform: scale(1.1);
+}
