@@ -14,6 +14,7 @@ export { Header } from './organisms/Header';
 export { LoginForm } from './organisms/LoginForm';
 export { RegisterForm } from './organisms/RegisterForm';
 export { CollectionPointForm } from './organisms/CollectionPointForm';
+export { Footer } from './organisms/Footer';
 
 
 export { AuthLayout } from './templates/AuthLayout';
