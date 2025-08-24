@@ -1,6 +1,5 @@
-// src/App.tsx
 import { Routes, Route, Navigate } from 'react-router-dom'
-import { Login } from './pages'
+import { Dashboard, Login, Register } from './pages/index'
 
 function App() {
   return (
@@ -9,7 +8,10 @@ function App() {
         <Route path="/" element={<Navigate to="/login" replace />} />
         
         <Route path="/login" element={<Login />} />
-       
+        <Route path="/register" element={<Register />} />
+        
+        <Route path="/dashboard" element={<Dashboard />} />
+        
         <Route path="*" element={
           <div style={{ 
             minHeight: '100vh', 
@@ -25,6 +27,15 @@ function App() {
             <p style={{ color: 'var(--color-text-secondary)' }}>
               A página que você está procurando não existe.
             </p>
+            <a 
+              href="/login" 
+              style={{ 
+                color: 'var(--color-primary-600)', 
+                textDecoration: 'underline' 
+              }}
+            >
+              ← Ir para Login
+            </a>
           </div>
         } />
       </Routes>
