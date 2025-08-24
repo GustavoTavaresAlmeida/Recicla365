@@ -1,5 +1,4 @@
 [data-theme="light"] {
-  /* === CORES PRIMÁRIAS (Azul Claro) === */
   --color-primary-50: var(--blue-50);
   --color-primary-100: var(--blue-100);
   --color-primary-200: var(--blue-200);
@@ -11,7 +10,6 @@
   --color-primary-800: var(--blue-800);
   --color-primary-900: var(--blue-900);
 
-  /* === CORES SECUNDÁRIAS (Verde Sustentável) === */
   --color-secondary-50: var(--green-50);
   --color-secondary-100: var(--green-100);
   --color-secondary-200: var(--green-200);
@@ -23,19 +21,16 @@
   --color-secondary-800: var(--green-800);
   --color-secondary-900: var(--green-900);
 
-  /* === CORES DE FUNDO === */
   --bg-primary: var(--white);
   --bg-secondary: var(--gray-50);
   --bg-tertiary: var(--gray-100);
   --bg-card: var(--white);
   --bg-overlay: rgba(0, 0, 0, 0.5);
 
-  /* Fundos com gradientes (tema sustentável) */
   --bg-gradient-primary: linear-gradient(135deg, var(--blue-400) 0%, var(--green-400) 100%);
   --bg-gradient-secondary: linear-gradient(135deg, var(--blue-100) 0%, var(--green-100) 100%);
   --bg-gradient-hero: linear-gradient(135deg, var(--blue-50) 0%, var(--green-50) 50%, var(--blue-50) 100%);
 
-  /* === CORES DE TEXTO === */
   --text-primary: var(--gray-900);
   --text-secondary: var(--gray-700);
   --text-tertiary: var(--gray-500);
@@ -44,42 +39,35 @@
   --text-link: var(--color-primary-600);
   --text-link-hover: var(--color-primary-700);
 
-  /* === CORES DE BORDA === */
   --border-primary: var(--gray-200);
   --border-secondary: var(--gray-300);
   --border-focus: var(--color-primary-500);
   --border-error: var(--error);
   --border-success: var(--success);
 
-  /* === CORES DE BOTÕES === */
-  /* Botão Primário (Azul) */
   --btn-primary-bg: var(--color-primary-600);
   --btn-primary-bg-hover: var(--color-primary-700);
   --btn-primary-bg-active: var(--color-primary-800);
   --btn-primary-text: var(--white);
   --btn-primary-border: var(--color-primary-600);
 
-  /* Botão Secundário (Verde) */
   --btn-secondary-bg: var(--color-secondary-600);
   --btn-secondary-bg-hover: var(--color-secondary-700);
   --btn-secondary-bg-active: var(--color-secondary-800);
   --btn-secondary-text: var(--white);
   --btn-secondary-border: var(--color-secondary-600);
 
-  /* Botão Outline */
   --btn-outline-bg: var(--transparent);
   --btn-outline-bg-hover: var(--color-primary-50);
   --btn-outline-text: var(--color-primary-600);
   --btn-outline-text-hover: var(--color-primary-700);
   --btn-outline-border: var(--color-primary-600);
 
-  /* Botão Ghost */
   --btn-ghost-bg: var(--transparent);
   --btn-ghost-bg-hover: var(--gray-100);
   --btn-ghost-text: var(--text-primary);
   --btn-ghost-text-hover: var(--color-primary-700);
 
-  /* === CORES DE FORMULÁRIOS === */
   --input-bg: var(--white);
   --input-bg-disabled: var(--gray-100);
   --input-border: var(--border-primary);
@@ -88,20 +76,17 @@
   --input-text: var(--text-primary);
   --input-placeholder: var(--text-tertiary);
 
-  /* === CORES DE CARDS === */
   --card-bg: var(--bg-card);
   --card-border: var(--border-primary);
   --card-shadow: var(--shadow-md);
   --card-hover-shadow: var(--shadow-lg);
 
-  /* === CORES DE NAVEGAÇÃO === */
   --nav-bg: var(--white);
   --nav-border: var(--border-primary);
   --nav-text: var(--text-secondary);
   --nav-text-active: var(--color-primary-700);
   --nav-text-hover: var(--color-primary-600);
 
-  /* === CORES DE STATUS === */
   --status-success-bg: var(--success-light);
   --status-success-text: var(--success-dark);
   --status-success-border: var(--success);
@@ -118,13 +103,11 @@
   --status-info-text: var(--info-dark);
   --status-info-border: var(--info);
 
-  /* === CORES ESPECÍFICAS DO TEMA SUSTENTÁVEL === */
   --eco-recycling: var(--color-secondary-600);
   --eco-nature: var(--green-700);
   --eco-water: var(--blue-600);
   --eco-earth: #8b5a2b;
   --eco-organic: var(--green-800);
   
-  /* === SOMBRAS CUSTOMIZADAS === */
   --shadow-colored: 0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(34, 197, 94, 0.06);
 }

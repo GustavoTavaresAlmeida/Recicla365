@@ -1,5 +1,4 @@
 [data-theme="dark"] {
-  /* === CORES PRIMÁRIAS (Azul adaptado para escuro) === */
   --color-primary-50: var(--blue-900);
   --color-primary-100: var(--blue-800);
   --color-primary-200: var(--blue-700);
@@ -11,7 +10,6 @@
   --color-primary-800: var(--blue-100);
   --color-primary-900: var(--blue-50);
 
-  /* === CORES SECUNDÁRIAS (Verde adaptado para escuro) === */
   --color-secondary-50: var(--green-900);
   --color-secondary-100: var(--green-800);
   --color-secondary-200: var(--green-700);
@@ -23,19 +21,16 @@
   --color-secondary-800: var(--green-100);
   --color-secondary-900: var(--green-50);
 
-  /* === CORES DE FUNDO === */
   --bg-primary: var(--gray-900);
   --bg-secondary: var(--gray-800);
   --bg-tertiary: var(--gray-700);
   --bg-card: var(--gray-800);
   --bg-overlay: rgba(0, 0, 0, 0.7);
 
-  /* Fundos com gradientes (tema sustentável escuro) */
   --bg-gradient-primary: linear-gradient(135deg, #1e40af 0%, #166534 100%);
   --bg-gradient-secondary: linear-gradient(135deg, #1f2937 0%, #374151 100%);
   --bg-gradient-hero: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 50%, var(--gray-900) 100%);
 
-  /* === CORES DE TEXTO === */
   --text-primary: var(--gray-100);
   --text-secondary: var(--gray-300);
   --text-tertiary: var(--gray-400);
@@ -44,42 +39,35 @@
   --text-link: var(--color-primary-400);
   --text-link-hover: var(--color-primary-300);
 
-  /* === CORES DE BORDA === */
   --border-primary: var(--gray-700);
   --border-secondary: var(--gray-600);
   --border-focus: var(--color-primary-500);
   --border-error: var(--error);
   --border-success: var(--success);
 
-  /* === CORES DE BOTÕES === */
-  /* Botão Primário (Azul) */
   --btn-primary-bg: var(--color-primary-600);
   --btn-primary-bg-hover: var(--color-primary-500);
   --btn-primary-bg-active: var(--color-primary-400);
   --btn-primary-text: var(--gray-900);
   --btn-primary-border: var(--color-primary-600);
 
-  /* Botão Secundário (Verde) */
   --btn-secondary-bg: var(--color-secondary-600);
   --btn-secondary-bg-hover: var(--color-secondary-500);
   --btn-secondary-bg-active: var(--color-secondary-400);
   --btn-secondary-text: var(--gray-900);
   --btn-secondary-border: var(--color-secondary-600);
 
-  /* Botão Outline */
   --btn-outline-bg: var(--transparent);
   --btn-outline-bg-hover: rgba(147, 197, 253, 0.1);
   --btn-outline-text: var(--color-primary-400);
   --btn-outline-text-hover: var(--color-primary-300);
   --btn-outline-border: var(--color-primary-500);
 
-  /* Botão Ghost */
   --btn-ghost-bg: var(--transparent);
   --btn-ghost-bg-hover: var(--gray-800);
   --btn-ghost-text: var(--text-primary);
   --btn-ghost-text-hover: var(--color-primary-400);
 
-  /* === CORES DE FORMULÁRIOS === */
   --input-bg: var(--gray-800);
   --input-bg-disabled: var(--gray-700);
   --input-border: var(--border-primary);
@@ -88,20 +76,17 @@
   --input-text: var(--text-primary);
   --input-placeholder: var(--text-tertiary);
 
-  /* === CORES DE CARDS === */
   --card-bg: var(--bg-card);
   --card-border: var(--border-primary);
   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
 
-  /* === CORES DE NAVEGAÇÃO === */
   --nav-bg: var(--gray-800);
   --nav-border: var(--border-primary);
   --nav-text: var(--text-secondary);
   --nav-text-active: var(--color-primary-400);
   --nav-text-hover: var(--color-primary-500);
 
-  /* === CORES DE STATUS === */
   --status-success-bg: rgba(34, 197, 94, 0.1);
   --status-success-text: var(--green-300);
   --status-success-border: var(--green-500);
@@ -118,13 +103,11 @@
   --status-info-text: var(--blue-300);
   --status-info-border: var(--blue-500);
 
-  /* === CORES ESPECÍFICAS DO TEMA SUSTENTÁVEL === */
   --eco-recycling: var(--color-secondary-500);
   --eco-nature: var(--green-400);
   --eco-water: var(--blue-400);
   --eco-earth: #d2691e;
   --eco-organic: var(--green-300);
   
-  /* === SOMBRAS CUSTOMIZADAS === */
   --shadow-colored: 0 4px 6px -1px rgba(147, 197, 253, 0.2), 0 2px 4px -1px rgba(134, 239, 172, 0.1);
 }
