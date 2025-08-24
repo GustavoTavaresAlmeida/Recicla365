@@ -158,12 +158,6 @@ export const Login = () => {
               </Link>
             </p>
           </div>
-
-          <div className="test-credentials">
-            <h3>Credenciais para teste:</h3>
-            <p><strong>E-mail:</strong> joao@email.com</p>
-            <p><strong>Senha:</strong> senha123</p>
-          </div>
         </div>
       </div>
     </div>
