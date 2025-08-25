@@ -7,3 +7,5 @@ export { Dashboard } from './Dashboard/Dashboard';
 export {} from './CadastroPontoColeta';
 
 export {} from './PontosColeta';
+
+export {} from './EditarPontoColeta';
