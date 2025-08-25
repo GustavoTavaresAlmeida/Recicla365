@@ -1,4 +1,171 @@
-// src/data/mockData.ts
+import type { Usuario, LocalColeta, EstadoEstatistica, TipoResiduo } from '../types';
+
+export const usuarioMock: Usuario = {
+  id: 'u1754939826270',
+  nome: 'João da Silva',
+  email: 'joao.silva@example.com',
+  cpf: '98765432100',
+  sexo: 'M',
+  nascimento: '1990-05-15'
+};
+
+export const locaisColetaMock: LocalColeta[] = [
+  {
+    id: 'lc1',
+    usuarioId: 'u1754939826270',
+    nome: 'EcoPonto Central',
+    descricao: 'Coleta seletiva central da cidade com amplo espaço para diversos tipos de materiais.',
+    endereco: {
+      cep: '01001000',
+      logradouro: 'Praça da Sé',
+      bairro: 'Sé',
+      cidade: 'São Paulo',
+      estado: 'SP',
+      numero: '1'
+    },
+    coordenadas: {
+      latitude: -23.55052,
+      longitude: -46.63308
+    },
+    tiposMaterial: ['Vidro', 'Papel', 'Plástico', 'Metal'],
+    dataCriacao: '2024-01-15T10:30:00Z',
+    dataAtualizacao: '2024-02-20T14:45:00Z'
+  },
+  {
+    id: 'lc2',
+    usuarioId: 'u1754939826270',
+    nome: 'Centro Verde Zona Norte',
+    descricao: 'Ponto de coleta especializado em materiais orgânicos e recicláveis.',
+    endereco: {
+      cep: '02001000',
+      logradouro: 'Avenida Paulista',
+      bairro: 'Bela Vista',
+      cidade: 'São Paulo',
+      estado: 'SP',
+      numero: '1000'
+    },
+    coordenadas: {
+      latitude: -23.56168,
+      longitude: -46.65588
+    },
+    tiposMaterial: ['Orgânico', 'Papel', 'Plástico'],
+    dataCriacao: '2024-01-20T09:15:00Z',
+    dataAtualizacao: '2024-02-15T16:20:00Z'
+  },
+  {
+    id: 'lc3',
+    usuarioId: 'u1754939826270',
+    nome: 'EcoStation Vila Madalena',
+    descricao: 'Estação de reciclagem comunitária com foco em vidro e metal.',
+    endereco: {
+      cep: '05014000',
+      logradouro: 'Rua Harmonia',
+      bairro: 'Vila Madalena',
+      cidade: 'São Paulo',
+      estado: 'SP',
+      numero: '123'
+    },
+    coordenadas: {
+      latitude: -23.53588,
+      longitude: -46.69177
+    },
+    tiposMaterial: ['Vidro', 'Metal'],
+    dataCriacao: '2024-02-01T11:00:00Z'
+  },
+  {
+    id: 'lc4',
+    usuarioId: 'u1754939826270',
+    nome: 'Recicla Jardins',
+    descricao: 'Ponto de coleta premium nos Jardins para todos os tipos de materiais.',
+    endereco: {
+      cep: '01310100',
+      logradouro: 'Avenida Paulista',
+      bairro: 'Jardins',
+      cidade: 'São Paulo',
+      estado: 'SP',
+      numero: '2000'
+    },
+    coordenadas: {
+      latitude: -23.56294,
+      longitude: -46.65427
+    },
+    tiposMaterial: ['Vidro', 'Papel', 'Plástico', 'Metal', 'Orgânico'],
+    dataCriacao: '2024-02-10T08:30:00Z'
+  }
+];
+
+export const estadosEstatisticasMock: EstadoEstatistica[] = [
+  { estado: 'SP', quantidade: 15 },
+  { estado: 'RJ', quantidade: 8 },
+  { estado: 'MG', quantidade: 6 },
+  { estado: 'RS', quantidade: 5 },
+  { estado: 'PR', quantidade: 4 },
+  { estado: 'SC', quantidade: 3 },
+  { estado: 'BA', quantidade: 3 },
+  { estado: 'PE', quantidade: 2 },
+  { estado: 'CE', quantidade: 2 },
+  { estado: 'GO', quantidade: 2 },
+  { estado: 'MA', quantidade: 1 },
+  { estado: 'ES', quantidade: 1 }
+];
+
+export const tiposResiduoOptions: { value: TipoResiduo; label: string; color: string }[] = [
+  { value: 'Vidro', label: 'Vidro', color: 'var(--recycle-glass)' },
+  { value: 'Papel', label: 'Papel', color: 'var(--recycle-paper)' },
+  { value: 'Plástico', label: 'Plástico', color: 'var(--recycle-plastic)' },
+  { value: 'Metal', label: 'Metal', color: 'var(--recycle-metal)' },
+  { value: 'Orgânico', label: 'Orgânico', color: 'var(--recycle-organic)' }
+];
+
+export const sexoOptions = [
+  { value: 'M', label: 'Masculino' },
+  { value: 'F', label: 'Feminino' },
+  { value: 'Outro', label: 'Outro' }
+];
+
+export const estadosBrasil = [
+  { value: 'AC', label: 'Acre' },
+  { value: 'AL', label: 'Alagoas' },
+  { value: 'AP', label: 'Amapá' },
+  { value: 'AM', label: 'Amazonas' },
+  { value: 'BA', label: 'Bahia' },
+  { value: 'CE', label: 'Ceará' },
+  { value: 'DF', label: 'Distrito Federal' },
+  { value: 'ES', label: 'Espírito Santo' },
+  { value: 'GO', label: 'Goiás' },
+  { value: 'MA', label: 'Maranhão' },
+  { value: 'MT', label: 'Mato Grosso' },
+  { value: 'MS', label: 'Mato Grosso do Sul' },
+  { value: 'MG', label: 'Minas Gerais' },
+  { value: 'PA', label: 'Pará' },
+  { value: 'PB', label: 'Paraíba' },
+  { value: 'PR', label: 'Paraná' },
+  { value: 'PE', label: 'Pernambuco' },
+  { value: 'PI', label: 'Piauí' },
+  { value: 'RJ', label: 'Rio de Janeiro' },
+  { value: 'RN', label: 'Rio Grande do Norte' },
+  { value: 'RS', label: 'Rio Grande do Sul' },
+  { value: 'RO', label: 'Rondônia' },
+  { value: 'RR', label: 'Roraima' },
+  { value: 'SC', label: 'Santa Catarina' },
+  { value: 'SP', label: 'São Paulo' },
+  { value: 'SE', label: 'Sergipe' },
+  { value: 'TO', label: 'Tocantins' }
+];
+
+export const generateId = (): string => {
+  return 'id_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+};
+
+export const simulateApiResponse = async <T>(data: T, delayMs: number = 1000): Promise<T> => {
+  await delay(delayMs);
+  return data;
+};
+
+export const simulateApiError = async (message: string = 'Erro na API', delayMs: number = 1000): Promise<never> => {
+  await delay(delayMs);
+  throw new Error(message);
+};
 
 export interface User {
   id: string;
